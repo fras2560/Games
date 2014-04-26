@@ -1,0 +1,56 @@
+{
+    "easy": [
+        {
+            "word": "hey",
+            "hint": "Beginning of conversation",
+            "interest": [
+                "nerd",
+                "interjection"
+            ]
+        },
+        {
+            "word": "there",
+            "hint": "Their cousin",
+            "interest": [
+                "nerd",
+                "grammar"
+            ]
+        }
+    ],
+    "medium": [
+        {
+            "word": "hey",
+            "hint": "Beginning of conversation",
+            "interest": [
+                "nerd",
+                "interjection"
+            ]
+        },
+        {
+            "word": "there",
+            "hint": "Their cousin",
+            "interest": [
+                "nerd",
+                "grammar"
+            ]
+        }
+    ],
+    "hard": [
+        {
+            "word": "numerical analysis",
+            "hint": "Math's best guess",
+            "interest": [
+                "computer",
+                "math"
+            ]
+        },
+        {
+            "word": "divide and conquer",
+            "hint": "Goes hand in hand with Recursion",
+            "interest": [
+                "computer",
+                "math"
+            ]
+        }
+    ]
+}
