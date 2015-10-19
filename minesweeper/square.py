@@ -48,12 +48,19 @@ class Square():
         return self.neighbors
 
     def draw(self, surface):
-        print(self.x , self.y)
         if self.covered:
             pygame.draw.rect(surface, BLACK, (self.x, self.y, SQUARE, SQUARE), 1)
         else:
             header = pygame.font.SysFont('monospace', 18)
             label = header.render(str(self.neighbors), 2, BLACK)
+            surface.blit(label, (self.x, self.y))
+        if self.covered and self.flagged:
+            header = pygame.font.SysFont('monospace', 18)
+            label = header.render("F", 2, BLACK)
+            surface.blit(label, (self.x, self.y))
+        elif self.covered and self.mark:
+            header = pygame.font.SysFont('monospace', 18)
+            label = header.render("?", 2, BLACK)
             surface.blit(label, (self.x, self.y))
 class Test(unittest.TestCase):
 

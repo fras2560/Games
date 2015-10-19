@@ -28,10 +28,10 @@ class game():
                 y = pos[1]
                 if self.in_bounds(x, y) and event.button == 3:
                     # right click
-                    self.game.right_click (x - MARGIN, y - MARGIN)
+                    self.game.right_click (x, y)
                 elif  self.in_bounds(x, y) and event.button == 1:
                     # left click
-                    self.game.left_click (x - MARGIN, y - MARGIN)
+                    self.game.left_click (x, y)
 
     def in_bounds(self, x, y):
         return (x > MARGIN or x < SIZE[0] - MARGIN) and\

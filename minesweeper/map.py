@@ -6,7 +6,7 @@ Created on Oct 18, 2015
 from minesweeper.square import Square
 import networkx as nx
 import logging
-from minesweeper.settings import SQUARE
+from minesweeper.settings import SQUARE, MARGIN
 import random
 class Map():
     def __init__(self, width, height, logger=None, bombs=10):
@@ -22,7 +22,7 @@ class Map():
         while row < self.height:
             column = 0
             while column < self.width:
-                self.add_square(Square(x=column*SQUARE, y=row*SQUARE),row, column)
+                self.add_square(Square(x=column*SQUARE + MARGIN, y=row*SQUARE + MARGIN),row, column)
                 column += 1
             row +=1 
         self.set_bombs(bombs)
@@ -80,6 +80,7 @@ class Map():
         fucked_up = False
         nodes = nx.get_node_attributes(self._graph, 'node')
         node_id = (x // SQUARE) + self.width * (y // SQUARE)
+        print(x, y)
         if nodes[node_id].is_covered():
             nodes[node_id].uncover()
         else:
